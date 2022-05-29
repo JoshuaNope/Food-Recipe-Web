@@ -4,7 +4,7 @@ const Movie = require('../models/Movie');
 const account = require('../models/account');
 const Followme = require('../models/followme');
 const Trends = require('../models/trending');
-const post = require('../models/post')
+const post = require('../models/post');
 
 router.get("/", async (req, res, next) => {
     //cek user session
