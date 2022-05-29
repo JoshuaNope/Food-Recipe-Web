@@ -279,6 +279,6 @@ function saveImage(movie, imgEncoded) {
   }
 }
 
-app.listen(Port, function(){
-  console.log("http://localhost:" + Port);
+app.listen(process.env.PORT || 3000, function(){
+  console.log("server is active");
 });
