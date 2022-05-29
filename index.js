@@ -23,7 +23,7 @@ app.use(session({
 
 
 mongoose.connect(
-  (''),
+  ('mongodb+srv://admin:adminaja123456@cluster0.ndovz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'),
   ()=>{console.log('Terhubung ke DB');},
   { useNewUrlParser: true },
   { useUnifiedTopology: true },
@@ -125,8 +125,8 @@ app.post('/VERIF', (req, res) => { //email verif forget password
     secure: false, // use SSL
     port: 25, // port for secure SMTP
     auth: {
-        user: '',        // Email Dev
-        pass: ''     // Pass Dev
+        user: 'omaiwamo.shindeiru58@gmail.com',        // Email Dev
+        pass: 'joshuasunarko5813'     // Pass Dev
     },
     tls: {
       rejectUnauthorized: false
