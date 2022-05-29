@@ -1,0 +1,96 @@
+<% movie.reverse().forEach(m => { %>
+  <% if(m.id == 1){ %>
+    <!--POST-->
+    <div class="post">
+      <div class="the_post_content">
+        <div class="profile-picture">
+          <img
+            src=<%= m.ImagePath %>
+            alt=""
+          />
+          <h3>
+            <a><%= m.username %></a>
+          </h3>
+        </div>
+
+        <div class="post_body main">
+          <img
+            src="<%= m.coverImagePath %>"
+            alt=""
+          />
+          <div class="vl"></div>
+            <div class="main-2">
+              <a style="color: var(--base-color); font-size: 16pt;">Nama Makanan :</a>
+              <p style="color: var(--base-color); font-size: 16pt;"><%= m.title %></p>
+              <div class="desc">
+                <a>Description :</a>
+                <p><%= m.description %></p>
+                <a>Ingridients :</a>
+                <p><%= m.ingridients %></p>
+                <a>How To Cook :</a>
+                <p><%= m.tutorial %></p>
+                <a>Link :</a>
+                <br>
+                <a style="font-size: 12pt; font-weight: normal;" href="<%= m.linktutorial %>"><%= m.linktutorial %></a>
+            </div>
+            <div style="display: flex;">
+              <i class="fa fa-comment-o" aria-hidden="true" data-toggle="modal" data-target="#PopUp"></i>
+              <i onclick="myFunction(this)" class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+              <!-- FloatWindow -->
+              <div class="modal fade" id="PopUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Comment</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div style="display: flex;">
+                        <img style="border-radius: 50px; width: 50px; height: 50px; object-fit: fill;" src="https://i.ibb.co/TWf7xTV/Avatar-Logo-PNG-Photos.png" alt="Loading Fail">
+                        <p>dummy - Makanannya enak gan</p>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Finished FloatWindow -->
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+ <%} else if(m.id == 2) { %>
+  <div class="post">
+    <div class="the_post_content">
+      <div class="profile-picture">
+        <img
+          src=<%= m.ImagePath %>
+          alt=""
+        />
+        <h3 style="display: flex; width: 200px; padding: 1%;">
+          <a href="#"><%= m.username %></a>
+        </h3>
+      </div>
+
+      <div class="post_body">
+        <div class="desc-nama" style="font-size: 16pt;">
+          <p>
+            <%= m.name %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+  <% }) %>
+  <!-- post end -->
+  <!--POST-->
+  <script>
+    function myFunction(x) {
+      x.classList.toggle("fa-thumbs-up");
+    }
+  </script>

@@ -1,0 +1,174 @@
+body {
+    --base-color: white;
+    --base-color-2: #426afd;
+    --base-color-4: blue;
+}
+        
+            .loader {
+                position: fixed;
+                z-index: 99;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background:white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+
+                .loader > img {
+                width: 250px;
+                }
+
+                .loader.hidden {
+                animation: fadeOut 1s;
+                animation-fill-mode: forwards;
+                }
+
+                @keyframes fadeOut {
+                100% {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            .navbar {
+                border: none;
+                border-bottom-left-radius: 10px;
+                box-shadow: 5px 5px var(--base-color-4);
+            }
+            .bg-color1 {
+                background: var(--base-color-2);
+            }
+            .navbar .navigasi-1 {
+                background-color: var(--base-color-2);
+                font-family: 'Black Ops One', cursive;
+                color: var(--base-color);
+                text-decoration: none;
+            }
+            .navbar .navigasi-1:hover {
+                animation-name: navbar;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+            .navbar .navigasi-2 {
+                color: var(--base-color);
+                font-family: 'Black Ops One', cursive;
+                text-decoration: none;
+                position: relative;
+            }
+            .navbar .navigasi-2::after {
+                content: '';
+                height: 3px;
+                width: 0;
+                background: var(--base-color);
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                transition: 0.5s;
+            }
+            .navbar .navigasi-2:hover::after {
+                width: 100%;
+            }
+            @keyframes navbar {
+                50% {text-shadow: 15px 15px var(--base-color);}
+                100%{text-shadow: none;}
+            }
+            .card-1 {
+                margin-left: 10px;
+                border-radius: 10px;
+                position: relative;
+                box-shadow: 5px 5px var(--base-color-2);
+                border: 2px solid var(--base-color-4);
+            }
+            .card-2 {
+                color: var(--base-color-2);
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 18pt;
+                text-align: center;
+                border: none;
+            }
+            .card-font {
+                color: var(--base-color-2);
+                font-family: sans-serif;
+            }
+            .card-input {
+                border-radius: 20px;
+                position: relative;
+            }
+            .card-input:focus {
+                border: 2px solid var(--base-color-2);
+            }
+            .card-fontkecil {
+                font-size: 10pt;
+                color:var(--base-color-2);
+                text-decoration: none;
+            }
+            .card-fontkecil:hover {
+                font-weight: bold;
+            }
+            .gambar {
+                margin-top: 4%;
+                display: flex;
+            }
+            .main {
+                margin-top: 3%;
+                display: flex;
+                justify-content: center;
+            }
+            .main-2 {
+                display: grid;
+            }
+            .main .card .material-icons {
+                font-size: 50pt;
+            }
+            .card-fontsedang {
+                color: var(--base-color-2);
+                font-family: sans-serif;
+                font-size: 10pt;
+            }
+            .forget-pass {
+                margin-right: 26%;
+                font-size: 10pt;
+            }
+            .forget-pass:hover {
+                border: none;
+                font-weight: normal;
+                color: var(--base-color-2);
+            }
+            .show-pass {
+                cursor: pointer;
+                color: var(--base-color-2);
+                font-size: 10pt;
+            }
+            .show-pass:hover {
+                color: var(--base-color-2);
+                text-decoration: none;
+            }
+            .btn-color {
+                color: var(--base-color-2);
+                background-color: transparent;
+                border: var(--base-color-2) 1px solid;
+            }
+            .btn-color:hover {
+                animation-name: button;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes button {
+                50% {color: var(--base-color); background-color: var(--base-color-2); box-shadow: 5px 5px var(--base-color-2);}
+                100%{color: var(--base-color-2); background-color: transparent; box-shadow: none;}
+            }
+            .bayangan-gambar {
+                box-shadow: none;
+            }
+            .bayangan-gambar:hover{
+                animation-name: bayangan;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes bayangan {
+                50% {box-shadow: 0px 0px 25px var(--base-color-4);}
+                100%{box-shadow: none;}
+            }

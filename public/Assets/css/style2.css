@@ -1,0 +1,328 @@
+body {
+  --base-color: white;
+  --base-color-2: #426afd;
+  --base-color-4: blue;
+  background-color: var(--base-color);
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+
+.vl {
+  border-left: 6px solid var(--base-color);
+  margin: 1%;
+  border-radius: 25px;
+  animation-name: vlanim;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes vlanim {
+  25% {border-left: 6px solid var(--base-color);}
+  50% {border-left: 6px solid var(--base-color-4);}
+  75% {border-left: 6px solid var(--base-color);}
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.thumb {
+  height: 100px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+div.profile-nav > a {
+  font-size: 35px;
+  padding: 15%;
+  margin-right: 5%;
+}
+
+
+/*=====================================*/
+
+.grid-container-xxl {
+    color: var(--base-color-2);
+    display: grid;
+}
+
+/*=======================================*/
+
+.leftside {
+  display: grid;
+  grid-template-rows: 0.6fr repeat(15 , 0.3fr);
+}
+
+.Friend_bar_Option {
+    height: 100%;
+    width: 300px;
+    margin-top: 20px;
+    justify-items: right;
+    justify-items: right;
+    display: flex;
+}
+
+.content {
+  display: flex;
+}
+
+.friend img{
+  border-radius: 50%;
+  border: 3px solid green;
+  height: 50px;
+  width: 50px;
+}
+
+.friend-username a, .friend-username p{
+  color: white;
+  padding-left: 10px;
+}
+
+.Friend_bar_Option span {
+  font-size: 15pt;
+} 
+
+.Friend_bar_Option h2 {
+  font-size: 15pt;
+  padding-left: 10px;
+}
+
+.leftside .content {
+  color: white;
+}
+
+.spanmodal2 {
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.spanmodal2 button {
+  padding: 1% 25%;
+  font-size: 16pt;
+  font-weight: bold;
+  color: var(--base-color);
+  background-color: var(--base-color-2);
+  border-radius: 25px;
+  border: none;
+  box-shadow: none;
+  transition-duration: 0.5s;
+}
+.spanmodal2:hover button {
+  box-shadow: 0px 0px 50px var(--base-color);
+  transition-duration: 1s;
+}
+
+/* The Modal (background) */
+.modal2 {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content2 {
+position: relative;
+background-color: #fefefe;
+margin: auto;
+padding: 0;
+border: 1px solid #888;
+width: 80%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+.modal-header2 {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
+
+.modal-body2 {
+  padding: 2px 16px;
+  color: black;
+  background-color: white;
+}
+
+.modal-footer2 {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
+
+.modal-body {
+  height: 70vh;
+  max-height: 75vh;
+}
+
+.modal-body p {
+  height: 65vh;
+  overflow: auto;
+  word-break: keep-all;
+}
+
+.uploads {
+  margin: 1%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: transparent;
+  text-align: center;
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 2%;
+}
+
+.profile-picture {
+  font-size: 12pt;
+  color: var(--base-color);
+}
+
+.post_main {
+    overflow-y: scroll;
+    min-height: 1vh;
+    max-height: 97.5vh;
+    border-radius: 25px;
+}
+
+.post_main::-webkit-scrollbar {
+    display: none;
+}
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  margin: 1%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  background-color: var(--base-color-2);
+  border-radius: 25px;
+  box-shadow: 0px 0px 25px var(--base-color);
+}
+
+.the_post_content {
+  margin: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.post_body img {
+  min-width: 1vh;
+  max-width: 100vh;
+  object-fit: cover;
+  border-radius: 25px;
+  transition: 2.5s;
+  margin-bottom: 1%;
+}
+.post_body:hover img {
+  transition: 1s;
+  box-shadow: -10px 5px 5px var(--base-color-4);
+}
+
+.post_body {
+  word-break: break-all;
+  background-color: transparent;
+}
+
+.post_body a {
+  font-weight: bold;
+}
+
+.post_body i {
+  color: var(--base-color);
+  font-size: 25pt;
+  margin: 1%;
+}
+
+.main-2 {
+  display: block;
+  margin: 0%;
+}
+
+.desc {
+  padding: 1%;
+  margin: 1%;
+  font-size: 12pt;
+  color: var(--base-color-4);
+  min-width: 1vh;
+  max-width: 125vh;
+  min-height: 1vh;
+  max-height: 50vh;
+  background-color: var(--base-color);
+  border-radius: 25px;
+  overflow: auto;
+  word-break: keep-all;
+}
+
+.desc a {
+  font-size: 16pt;
+}
+
+.profile-picture {
+  margin-top: 1%;
+  padding: 1%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  display: flex;
+}
+
+.main {
+  margin-top: 1%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.hoverfooter{
+  background-color: var(--base-color-2);
+  color: var(--base-color);
+  padding: 1%;
+  border-radius: 25px;
+  transition: 2.5s;
+  cursor: default;
+}
+.hoverfooter:hover {
+  transition: 1s;
+  box-shadow: 5px 5px 0px var(--base-color-4);
+}
+
+.pelangi {
+  color: red;
+  position: relative;
+  animation: pelangi2 3s infinite;
+}
+@keyframes pelangi2 {
+  0%   {color:red; bottom:0px;}
+  25%  {color:yellow; bottom:15px;}
+  50%  {color:blue; bottom:0px;}
+  75%  {color:green; bottom:15px;}
+  100% {color:red; bottom:0px;}
+}

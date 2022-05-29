@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoRe</title>
+    <link rel="icon" href="https://i.ibb.co/GJMYmnN/FoodIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bowlby+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body_html" style="background-image: url('https://i.ibb.co/sw6756G/d36d462db827833805497d9ea78a1343.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; background-attachment: fixed;">  
+  <%- include('../layouts/navbar.ejs'); %>
+        <main class="post_main">
+          <div style="justify-content: center; text-align: center; margin: 1% 40%;">
+            <div style="color: var(--base-color); background-color: var(--base-color-2); border-radius: 25px; padding: 5% 0%; font-size: 25pt;">
+              <a>Welcome To <b class="pelangi">F</b><b class="pelangi" style="animation-delay: 0.25s;">o</b><b class="pelangi" style="animation-delay: 0.5s;">R</b><b class="pelangi" style="animation-delay: 0.75s;">e</b></a>
+            </div>
+          </div>
+              <!-- Upload start -->
+                <div class="uploads">
+                  <span class="spanmodal2">
+                    <a href="/upload"><button>Upload Your Own Food Recipe</button></a>
+                  </span>
+                </div>
+              <!-- Upload ends -->
+              <!-- post start-->
+              <%- include('../layouts/pro.ejs'); %>
+              <!-- post end-->
+              <footer style="background-color: var(--base-color); margin: 2.5% 0%; font-size: 16pt; border-top-left-radius: 25px; border-top-right-radius: 25px; box-shadow: 0px 0px 50px var(--base-color-2);">
+                <div style="padding: 2%; text-align: justify; display: flex; justify-content: space-evenly;">
+                  <div class="hoverfooter">
+                    <a><a class="material-icons" style="color: var(--base-color); font-size: 20pt; text-decoration: none;">account_box</a><b> Contact Us</b></a>
+                    <br>
+                    <ul style="list-style: none;">
+                      <li><div style="display: flex; flex-wrap: wrap;">Email:<br>example@gmail.com</div></li>
+                      <li><div style="display: flex; flex-wrap: wrap;">No:<br>+62 819846372738</div></li>
+                    </ul>
+                  </div>
+                  <div class="hoverfooter" style="margin-left: 1%;">
+                    <a><a class="material-icons" style="color: var(--base-color); font-size: 20pt; text-decoration: none;">people</a><b> About Us</b></a>
+                    <br>
+                    <ul style="list-style: none; font-size: 14pt;">
+                      <li><div style="display: flex; flex-wrap: wrap;">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                      </div></li>
+                    </ul>
+                  </div>
+                </div>
+              </footer> 
+        </main>
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script>feather.replace()</script>
+        <script>
+          // Get the modal
+          var modal2 = document.getElementById("myModal2");
+
+          // Get the button that opens the modal
+          var btn2 = document.getElementById("myBtn2");
+
+          // Get the <span> element that closes the modal
+          var span2 = document.getElementsByClassName("close2")[0];
+
+          // When the user clicks on the button, open the modal
+          btn2.onclick = function() {
+          modal2.style.display = "block";
+          }
+
+          // When the user clicks on <span> (x), close the modal
+          span2.onclick = function() {
+          modal2.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+          if (event.target == modal2) {
+              modal2.style.display = "none";
+          }
+          }
+      </script>
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementsByClassName("Comment_button");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        for(var i = 0 ; i < 1000 ; i++) {
+          btn[i].onclick = function() {
+          modal.style.display = "block";
+          };
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      }
+        </script>
+        <script>
+          window.addEventListener("load", function () {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden"; // class "loader hidden"
+          });
+        </script>
+</body>
+
+
+</html>

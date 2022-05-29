@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <!-- add to document <head> -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ICY</title>
+        <link rel = "icon" href = 
+        "https://i.ibb.co/7rWKwZS/1.jpg" 
+        type = "image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bowlby+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel = "icon" href = "https://i.ibb.co/7rWKwZS/1.jpg" type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bowlby+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/css/upload.css">
+
+
+    <!-- add before </body> -->
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+
+
+    <!-- VANILLA JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            FilePond.registerPlugin(
+                FilePondPluginImagePreview,
+                FilePondPluginImageResize,
+                FilePondPluginFileEncode
+            );
+            // https://pqina.nl/filepond/docs/patterns/api/filepond-object/#setting-options
+            FilePond.setOptions({
+                stylePanelAspectRatio: 150 / 100,
+                imageResizeTargetWidth: 100,
+                imageResizeTargetHeight: 150,
+            })
+            FilePond.parse(document.body);
+        });
+
+    </script>
+</head>
+
+<body>
+    <%- include('../layouts/navbar.ejs'); %> 
+    <body style="background-image: url('https://i.ibb.co/kcqZndh/1412206.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; background-attachment: fixed;">
+      <div class="ui bekgroun">
+        <h1>Upload Post</h1>
+          <form action="/add" class="ui form" method="post">
+                <div style="display: flex; padding: 2.5%;">
+                  <div style="display: block; margin: 0%; margin-right: 7.5%;">
+                    <div>
+                      <label for="img" style="color: var(--base-color); font-size: 16pt; margin: 2.5%; font-weight: bold;">Image :</label>
+                      <input type="file" name="img" id="img" class="filepond filepond--item">
+                    </div>
+                  </div>
+                  <div style="display: block;">
+                    <div>
+                      <label for="name" class="judullabel">Nama Makanan :</label>
+                      <input name="title" class="input-desc" style="border-radius: 10px; min-height: 1vh; max-height: 7.5vh; word-break: keep-all; min-width: 50vh; max-width: 50vh; overflow: hidden;">
+                    </div>
+                    <div>
+                        <label for="name" class="judullabel">Description :</label>
+                        <textarea name="description" class="input-desc" style="border-radius: 10px; min-height: 25vh; max-height: 25vh; word-break: keep-all; min-width: 50vh; max-width: 50vh;"></textarea>
+                    </div>
+                    <div>
+                      <label for="name" class="judullabel">Ingridients :</label>
+                      <textarea name="ingridients" class="input-desc" style="border-radius: 10px; min-height: 25vh; max-height: 25vh; word-break: keep-all; min-width: 50vh; max-width: 50vh;"></textarea>
+                    </div>
+                  </div>
+                  <div style="display: block;">
+                    <div>
+                      <label for="name" class="judullabel">How To Cook :</label>
+                      <textarea name="tutorial" class="input-desc" style="border-radius: 10px; min-height: 25vh; max-height: 25vh; word-break: keep-all; min-width: 50vh; max-width: 50vh;"></textarea>
+                    </div>
+                    <div>
+                      <label for="name" class="judullabel">Link Tutorial :</label>
+                      <textarea name="linktutorial" class="input-desc" style="border-radius: 10px; min-height: 25vh; max-height: 25vh; word-break: keep-all; min-width: 50vh; max-width: 50vh;"></textarea>
+                    </div>
+                  </div>
+                </div>
+              <div style="margin: 0% 25%;">
+                <button class="ui fluid button" type="submit" style="border-radius: 10px; min-height: 50px; max-height: 50px; color: #5c7aea;">Upload</button>
+              </div>
+          </form>
+      </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>feather.replace()</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</body>
+
+</html>
