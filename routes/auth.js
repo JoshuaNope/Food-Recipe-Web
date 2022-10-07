@@ -1,8 +1,5 @@
-const e = require('express');
 const express = require('express');
 const session = require('express-session');
-const { data } = require('jquery');
-const account = require('../models/account');
 const User = require('../models/account')
 const router = express.Router();
 
