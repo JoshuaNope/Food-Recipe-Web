@@ -15,7 +15,6 @@ router.get("/", async (req, res, next) => {
         const Email = req.session.user;
         const pic = await account.find({email: Email});
         const m  = await Movie.find();
-        const data2 = await account.find({name: Name});
         const flow = await Followme.find();
         const tren = await Trends.find();
         console.log(m)

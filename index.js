@@ -2,14 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
-const dotenv = require('dotenv');
 
 const Movie = require('./models/Movie');
 const account = require('./models/account');
 const User = require('./models/account')
 const app = express();
-
-const Port = 4000;
 
 
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
@@ -68,7 +65,6 @@ app.post('/changepw', async (req, res, next)=>{
   })
 
 app.post('/changepic', async (req, res, next) => {
-  const Image = req.body;
   saveImageUser(movie, img);
   try{
     const newMovie = await movie.save();
@@ -168,11 +164,8 @@ app.post('/VERIF', (req, res) => { //email verif forget password
 
 app.post('/profile_settings', async (req, res, next)=>{
   const Username= req.session.user; //email di session
-  const Pass = req .session.pass; //password di session
   const old_name = req.session.name; //nama lama di session
   const Name = req.body.name; //nama baru
-  const BIO = req.session.bio;
-  const number1 = req.session.number; //nomor yang lama di session
   const Bio = req.body.bio; //bio
   const Email = req.body.email; //email
   const Number = req.body.number; //no telp
